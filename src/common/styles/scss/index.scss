@@ -1,0 +1,23 @@
+/*
+*   颜色
+*/
+$theme_blue: #06c;
+$white: #fff;
+$gray: #eee;
+$deep_gray: #e5e5e5;
+$black: #000;
+
+/**
+* 样式 单个样式
+*/
+$divider_white: 1px solid rgba(255, 255, 255, 0.5); // 白色分割线
+
+/**
+* 整体的样式
+*/
+// 公共区域的样式
+@mixin common_content { 
+  background-color: $theme_blue;
+  color: $white;
+  padding: 13px 15px;
+}
