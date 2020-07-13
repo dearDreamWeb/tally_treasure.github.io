@@ -1,14 +1,27 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+const Home = () => import("@/views/Home.vue");
+const HomeContent = () => import("@/components/HomeContent.vue");
+const Tally = () => import("@/components/Tally.vue");
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "*",
+    path: "/",
+    redirect: "/home",
     name: "Home",
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: "home",
+        component: HomeContent,
+      },
+      {
+        path: "tally",
+        component: Tally
+      }
+    ]
   }
 ];
 

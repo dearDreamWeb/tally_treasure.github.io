@@ -1,17 +1,21 @@
 <template>
   <div class="home">
-    <diy-header navName="首页" />
+    <diy-header :navName="headerTiltle" />
+
+    <!-- route-view部分 -->
     <router-view />
+
     <!-- 底部导航 -->
     <footer class="nav">
       <router-link
         v-for="(item, index) in navLists"
         :key="index"
         :to="item.path"
-        :class="['nav_item']"
+        :class="['nav_item', { checked: item.path === $route.path }]"
+        @click.native.stop="headerTiltle = item.title"
       >
         <i :class="[item.icon, 'icon']"></i>
-        <p>{{ item.title }}</p>
+        <p class="nav_title">{{ item.title }}</p>
       </router-link>
     </footer>
   </div>
@@ -24,6 +28,7 @@ export default {
   name: "Home",
   data() {
     return {
+      headerTiltle: "首页",
       navLists: [
         {
           icon: "el-icon-house",
@@ -53,6 +58,7 @@ export default {
       ],
     };
   },
+  // mounted(){console.log(this.$route)},
   components: {
     diyHeader: Header,
   },
@@ -65,6 +71,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background: $gray;
+  // 底部导航
   .nav {
     position: fixed;
     left: 0;
@@ -82,6 +89,14 @@ export default {
       .icon {
         font-size: 32px;
       }
+      .nav_title {
+        padding-top: 5px;
+        font-size: 15px;
+      }
+    }
+    // 导航区被点击样式
+    .checked {
+      color: $theme_blue;
     }
   }
 }
