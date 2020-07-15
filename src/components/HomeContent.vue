@@ -19,12 +19,24 @@
         <i class="el-icon-document icon"></i>
         <span class="recently">最近</span>
       </header>
+      <tally-data-lists :tallyData="tallyData"></tally-data-lists>
     </section>
   </div>
 </template>
 
 <script>
-export default {};
+import TallyDataLists from "@/components/TallyDataLists";
+export default {
+  data() {
+    return {
+      // 获取vuex中的记账数据，只要前七条
+      tallyData: this.$store.getters.getTallyData.slice(0, 7),
+    };
+  },
+  components: {
+    TallyDataLists,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

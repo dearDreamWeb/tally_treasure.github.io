@@ -1,22 +1,25 @@
 /*
 *   颜色
 */
-$theme_blue: #06c;
-$white: #fff;
-$gray: #eee;
-$deep_gray: #e5e5e5;
-$black: #000;
+$theme_blue: #06c;    //主题 蓝色
+$light_blue: #bbddf3; // 浅蓝色
+$white: #fff;         // 白色
+$gray: #eee;          // 灰色
+$deep_gray: #e5e5e5;  // 深灰色
+$light_gray: #f6f6f7; // 浅灰色
+$black: #000;         // 黑色
 
 /**
 * 样式 单个样式
 */
 $divider_white: 1px solid rgba(255, 255, 255, 0.5); // 白色分割线
+$divider_black: 1px solid rgba(0, 0, 0, 0.1); // 黑色分割线
 
 /**
 * 整体的样式
 */
 // 公共区域的样式
-@mixin common_content { 
+@mixin common_content {
   background-color: $theme_blue;
   color: $white;
   padding: 13px 15px;
