@@ -12,7 +12,7 @@ import TallyDataLists from "@/components/TallyDataLists";
 export default {
   data() {
     return {
-      // 获取vuex中的记账数据，只要前七条
+      // 获取vuex中的记账数据
       tallyData: this.$store.getters.getTallyData,
     };
   },

@@ -77,7 +77,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -145,19 +144,12 @@ export default {
       }
     },
   },
-  computed: {
-    ...mapGetters(["getTags"]), //数组里面是vuex中的getters里的函数名
-  },
   watch: {
     remark(val) {
       if (val.length > this.remarkMaxLength) {
         this.remark = this.remark.slice(0, this.remarkMaxLength);
         this.$message.info(`亲，备注字数不能超过${this.remarkMaxLength}个`);
       }
-    },
-    // vuex中的getTags
-    getTags(newVal) {
-      this.tags = newVal;
     },
   },
 };

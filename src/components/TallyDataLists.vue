@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(item, index) in tallyData" :key="index">
         <el-row class="tallyData_item">
-          <el-col class="tag" title="aaa">{{ item.tag }}</el-col>
+          <el-col class="tag">{{ item.tag }}</el-col>
           <el-col class="remark">{{ item.remark }}</el-col>
           <el-col :class="['price', item.type === 0 ? 'expense' : 'income']"
             >￥{{ item.price }}
