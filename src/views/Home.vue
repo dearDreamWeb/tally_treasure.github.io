@@ -52,7 +52,7 @@ export default {
         },
         {
           icon: "el-icon-pie-chart",
-          title: "首页",
+          title: "统计",
           path: "/statistics",
         },
       ],

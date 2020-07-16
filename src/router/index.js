@@ -5,6 +5,7 @@ const HomeContent = () => import("@/components/HomeContent.vue");
 const Tally = () => import("@/components/Tally.vue");
 const Detail = () => import("@/components/Detail.vue");
 const Tags = () => import("@/components/Tags.vue");
+const Statistics = () => import("@/components/Statistics.vue");
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,10 @@ const routes = [
       {
         path: "tags",
         component: Tags
+      },
+      {
+        path: "statistics",
+        component: Statistics
       }
     ]
   }
