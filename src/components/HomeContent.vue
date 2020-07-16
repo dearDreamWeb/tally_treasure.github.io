@@ -19,7 +19,13 @@
         <i class="el-icon-document icon"></i>
         <span class="recently">最近</span>
       </header>
-      <tally-data-lists :tallyData="tallyData"></tally-data-lists>
+      <!-- TallyDataLists组件 -->
+      <tally-data-lists
+        :tallyData="tallyData"
+        v-if="tallyData.length > 0"
+      ></tally-data-lists>
+
+      <p class="noData" v-else>暂无数据</p>
     </section>
   </div>
 </template>
@@ -73,6 +79,11 @@ export default {
         padding-left: 5px;
         font-weight: 700;
       }
+    }
+    .noData {
+      padding-left: 18px;
+      font-size: 40px;
+      opacity: 0.5;
     }
   }
 }

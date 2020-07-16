@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 const Home = () => import("@/views/Home.vue");
+const NotFound = () => import("@/views/NotFound.vue");
 const HomeContent = () => import("@/components/HomeContent.vue");
 const Tally = () => import("@/components/Tally.vue");
 const Detail = () => import("@/components/Detail.vue");
@@ -37,6 +38,10 @@ const routes = [
         component: Statistics
       }
     ]
+  },
+  {
+    path: "*",
+    component: NotFound
   }
 ];
 
