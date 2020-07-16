@@ -1,8 +1,8 @@
 # 项目预览
 项目打包部署到了github和码云上。    
 
-<a href="https://flyingwxb.gitee.io/happynotes.gitee.io" target="_blank">码云版预览地址</a>（国内访问会很快）  
-<a href="https://deardreamweb.github.io/happyNotes.github.io" target="_blank">github版预览地址</a>（国内访问可能会有点慢，请耐心等待） 
+<a href="https://flyingwxb.gitee.io/tally_treasure.gitee.io" target="_blank">码云版预览地址</a>（国内访问会很快）  
+<a href="https://deardreamweb.github.io/tally_treasure.github.io/" target="_blank">github版预览地址</a>（国内访问可能会有点慢，请耐心等待） 
 
 
 # 记账宝
